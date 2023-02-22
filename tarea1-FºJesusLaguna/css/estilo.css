@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    background-color: rgb(255, 240, 222);
+    padding: 1rem 0 0 0;
+    justify-content: center;
+    align-items: center;
+}
+.perfil{
+    width: 6rem;
+    border-radius: 50%;
+    border: 0.1rem solid black;
+    box-shadow: 0 0 1rem black;
+    margin: 2rem;
+}
+
+.card{
+    margin: 3rem;
+
+}
+.entrada{
+    background-color: white;
+    margin: 2rem;
+    border-radius: 1rem;
+    border: 0.1rem solid black;
+}
+.uno{
+    text-align: center;
+}
+.pie{
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    border-top: 0.1rem solid black;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+}
