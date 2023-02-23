@@ -1,0 +1,1 @@
+Nombre: Jesús Apellidos: Laguna Porcuna Edad: 25 Lista de la compra: tomate,carne,huevos Dinero gastado: 20
