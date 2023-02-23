@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 15rem;
+    height: 32.5rem;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 20px black;
+
+}
+.container.day{
+    background-image: url("./img/stephen-leonardi-LDgdy9Zyun0-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.inputTemp{
+    margin: 1rem auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.4;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+.search{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+.inputTemp_number{
+    display: flex;
+    align-items: center;
+}
+
+.location{
+    flex-direction: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+.location_date{
+    margin: 2rem;
+}
+.weather{
+    flex: 0.1;
+    border-top: 2px solid white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+
+}

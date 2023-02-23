@@ -1,41 +1,36 @@
 
 
-let conexion;
-function cargaDatos() {
-    conexion = new XMLHttpRequest();
-    conexion.onreadystatechange = proesarCargaJson;
-    conexion.open("GET","https://randomuser.me/api/?results=10",true);
-    conexion.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-    conexion.send();
+let container = document.getElementById("coontainer");
+let searchForm = document.getElementById("search_submit");
+let searchInput = document.getElementById("search_input");
+let temperaturesDegrees = document.getElementById("degreeNumber");
+let weatherIcon = document.getElementById("weatherIcon");
+let temperatureDescription = document.getElementById("description");
+let timeZone = document.getElementById("timezone");
+let date = document.getElementById("date");
+let min = document.getElementById("min");
+let max = document.getElementById("max");
+
+
+const getWeatherData = async (city)=>{
+   const res = await fetch(`https://openweather43.p.rapidapi.com/weather?q=${city}&appid=da0f9c8d90bde7e619c3ec47766a42f4&appid=undefined&units=metric&lang=sp`, {
+
+   "headers": {
+    "X-RapidAPI-Key": "48ba8b96f8mshc868a2b7fdafb60p101437jsnfd84798f0952",
+    "X-RapidAPI-Host": "openweather43.p.rapidapi.com"
+
+    }});
+    const data = res.json();
+    console.log(data);
+
+
+
+
 }
 
-function proesarCargaJson() {
-    let div = document.getElementById("resp");
-    if (conexion.readyState == 4 || conexion.readyState == 200) {
-        let datos = JSON.parse(conexion.responseText);
-        datos.results.forEach(dato => {
-            let p = document.createElement("p");
-            let texto = document.createTextNode(dato.name.first);           
-            p.appendChild(texto);
-            div.appendChild(p);
-        });
-    }
+window.onload= ()=>{
+    getWeatherData("Sevilla");
 }
-window.onload = cargaDatos();
-
-
-/* PROMESAS
-
-let promesa = new Promise(){
-    
-}
-promesa.then(); //lo primero que comprueba
-promesa.catch(); //manejador de errores
-promesa.finally(); //siempre se ejecuta 
-*/
-
-
-
 
 
 

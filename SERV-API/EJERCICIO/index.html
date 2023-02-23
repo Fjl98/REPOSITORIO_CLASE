@@ -5,9 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div id="resp">
+    <div  class="container day" id="container">
+        <div class="inputTemp">
+            <form class="search_submit" id="search_submit">
+               <input type="text" class="search_input" id="search_input" placeholder="Entra tu Localizacion">
+                <button type="submit"></button>
+            </form>
+            <div class="inputTemp_number">
+                <div class="inputTemp_celsius" id="degreeNumber">14</div>
+                <div class="inputTemp_symbol">ºC</div>
+            </div>
+        </div>
+        <div class="location">
+            <div class="location_city" id="timezone">london</div>
+            <div class="location_date" id="date">fecha</div>
+        </div>
+        <div class="weather">
+            <div class="weather_min"><small>min: </small><span id="min"></span>ºC</div>
+            <div class="weather_max"><small>max: </small><span id="min"></span>ºC</div>
+        </div>
 
     </div>
     <script src="js/script.js"></script>
