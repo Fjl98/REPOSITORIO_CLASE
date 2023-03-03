@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "nodemailer": "^6.9.1"
+  }
+}

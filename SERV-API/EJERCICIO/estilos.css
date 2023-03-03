@@ -1,75 +1,69 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    
-}
-
+    -webkit-font-smoothing: antialiased;
+    }
 body{
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgb(41, 39, 39);
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(https://source.unsplash.com/random/1600x900/?landscape);
 }
-
-.container{
-    width: 15rem;
-    height: 32.5rem;
-    border: 2px solid #333;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 1rem;
-    box-shadow: 10px 10px 20px black;
-
-}
-.container.day{
-    background-image: url("./img/stephen-leonardi-LDgdy9Zyun0-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.inputTemp{
-    margin: 1rem auto;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    flex: 0.4;
-    font-size: 3rem;
-    font-weight: bold;
+.card{
+    background: rgba(0, 0, 0, 0.884);
     color: white;
+    padding: 1.5rem;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1rem;
 }
 .search{
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: none;
-}
-.inputTemp_number{
     display: flex;
     align-items: center;
-}
-
-.location{
-    flex-direction: 0.5;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
 }
-.location_date{
-    margin: 2rem;
-}
-.weather{
-    flex: 0.1;
-    border-top: 2px solid white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.search button{
+    margin: 1rem;
+    border-radius: 50%;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    outline: none;
+    background-color: rgba(92, 88, 88, 0.644);
     color: white;
+}
+.search button:hover{
+    background-color: rgb(92, 88, 88);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 1rem 1rem;
+    border-radius: 50px;
+    width: 15rem;
+    height: 2.5rem;
+    background-color: rgba(92, 88, 88, 0.644);
+    color: white;
+    font-family: inherit;
+    font-size: 100%;
+}
+.description{
+    text-transform: capitalize;
+}
 
+.loading{
+    visibility: hidden;
 }
+.loading::after{
+        visibility: visible;
+        content: "Loading...";
+        color: white;
+        }

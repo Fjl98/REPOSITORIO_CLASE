@@ -1,0 +1,4 @@
+ Nombre: Jesús Apellidos: Laguna Porcuna Edad: 25 Lista de la compra: tomate,carne,huevos Dinero gastado: 20 Cosas que tengo:  cartera , telefono /n
+ Nombre: Ana Apellidos: Rodriguez Baez Edad: 21 Lista de la compra: pasta,aceite,agua Dinero gastado: 50 Cosas que tengo:  telefono , bolso , maquillaje/n
+ Nombre: Jose Apellidos: Lopez Garcia Edad: 23 Lista de la compra: pera,naranja,melon Dinero gastado: 30 Cosas que tengo:  cartera , telefono/n
+ Nombre: Maria Apellidos: Perez hdhdh Edad: 18 Lista de la compra: esparagos,lomo,aceite Dinero gastado: 45 Cosas que tengo:  carte , bolso/n

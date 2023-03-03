@@ -1,38 +1,36 @@
+let weather = {
+    "apiKey": "e2c1d873e17655abe9c9bdf6946db59d",
+    fetchWeather: function (city) {
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid="+ this.apiKey)
+    .then((response)=>response.json())
+    .then((data)=>this.displayWeather(data));
+    },
+    displayWeather: function (data) {
+    const {name}=data;
+    const {icon,description}=data.weather[0];
+    const {temp,humidity}=data.main;
+    const {speed}=data.wind;
 
+    document.querySelector(".ciudad").innerText="Tiempo en: " + name;
+    document.querySelector(".descripcion").innerText=description;
+    document.querySelector(".temp").innerText=temp + "°C";
+    document.querySelector(".humedad").innerText="Humedad: "+humidity+"%";
+    document.querySelector(".viento").innerText="Velocidad del viento: "+speed+" km/h";
+    document.querySelector(".weather").classList.remove("loading");
+    document.body.style.backgroundImage="url('https://source.unsplash.com/random/1600x900/?"+ name +")";
+    },
+    search: function () {
+    this.fetchWeather(document.querySelector(".search-bar").value);
+    }
+    };
 
-let container = document.getElementById("coontainer");
-let searchForm = document.getElementById("search_submit");
-let searchInput = document.getElementById("search_input");
-let temperaturesDegrees = document.getElementById("degreeNumber");
-let weatherIcon = document.getElementById("weatherIcon");
-let temperatureDescription = document.getElementById("description");
-let timeZone = document.getElementById("timezone");
-let date = document.getElementById("date");
-let min = document.getElementById("min");
-let max = document.getElementById("max");
+document.querySelector(".search button").addEventListener("click", function () {
+    weather.search();
+});
+document.querySelector(".search-bar").addEventListener("keyup",function(event) {
+    if (event.key=="Enter") {
+    weather.search()
+    }
+});
 
-
-const getWeatherData = async (city)=>{
-   const res = await fetch(`https://openweather43.p.rapidapi.com/weather?q=${city}&appid=da0f9c8d90bde7e619c3ec47766a42f4&appid=undefined&units=metric&lang=sp`, {
-
-   "headers": {
-    "X-RapidAPI-Key": "48ba8b96f8mshc868a2b7fdafb60p101437jsnfd84798f0952",
-    "X-RapidAPI-Host": "openweather43.p.rapidapi.com"
-
-    }});
-    const data = res.json();
-    console.log(data);
-
-
-
-
-}
-
-window.onload= ()=>{
-    getWeatherData("Sevilla");
-}
-
-
-
-
-
+weather.fetchWeather("Sevilla");

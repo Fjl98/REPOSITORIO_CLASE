@@ -4,7 +4,7 @@ let conexion;
 function cargaDatos() {
     conexion = new XMLHttpRequest();
     conexion.onreadystatechange = proesarCargaJson;
-    conexion.open("GET","https://pokeapi.co/api/v2/pokemon/pikachu",true);
+    conexion.open("GET","https://pokeapi.co/api/v2/pokemon",true);
     conexion.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
     conexion.send();
 }

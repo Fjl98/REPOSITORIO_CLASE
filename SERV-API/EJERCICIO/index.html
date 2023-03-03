@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pagina del tiempo</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div  class="container day" id="container">
-        <div class="inputTemp">
-            <form class="search_submit" id="search_submit">
-               <input type="text" class="search_input" id="search_input" placeholder="Entra tu Localizacion">
-                <button type="submit"></button>
-            </form>
-            <div class="inputTemp_number">
-                <div class="inputTemp_celsius" id="degreeNumber">14</div>
-                <div class="inputTemp_symbol">ºC</div>
-            </div>
-        </div>
-        <div class="location">
-            <div class="location_city" id="timezone">london</div>
-            <div class="location_date" id="date">fecha</div>
-        </div>
-        <div class="weather">
-            <div class="weather_min"><small>min: </small><span id="min"></span>ºC</div>
-            <div class="weather_max"><small>max: </small><span id="min"></span>ºC</div>
-        </div>
-
-    </div>
-    <script src="js/script.js"></script>
+<div class="card">
+<div class="search">
+    <input type="text" class="search-bar" placeholder="Search">
+    <button>
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"></path></svg>
+    </button>
+</div>
+<div class="weather loading">
+    <h2 class="ciudad">Tiempo</h2>
+    <h1 class="temp">13°C</h1>
+<div class="descripcion">Nublado</div>
+<div class="humedad">Humedad</div>
+<div class="viento">Viento</div>
+</div>
+</div>
 </body>
 </html>
