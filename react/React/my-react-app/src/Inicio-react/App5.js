@@ -1,3 +1,5 @@
+
+//USECONTEXT
 import React, { createContext, useContext } from 'react';
 
 // Crea un contexto
