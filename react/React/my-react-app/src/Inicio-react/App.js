@@ -1,4 +1,4 @@
-// uso de los use State
+
 import { useState } from "react";
 function App() {
 
@@ -74,12 +74,14 @@ export default App;
 
 
 
-/*
+/*EJERCICIO BOTON DE LIKES QUE VA SUMANDO2
+
 const Likes = ({ parametros }) => {
   const [meGusta,setMeGusta] = useState(parametros);
   let elemento = (
   <button 
-    onClick={() =>{setMeGusta(meGusta + 1)}}
+    onClick={() =>{
+      setMeGusta(meGusta + 1)}}
     >
       {meGusta} likes
   </button>
