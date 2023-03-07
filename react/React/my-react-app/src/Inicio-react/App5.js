@@ -1,32 +1,32 @@
+import React,{Component, useContext} from 'react'
+import { useState,createContext } from 'react';
 
-//USECONTEXT
-import React, { createContext, useContext } from 'react';
+  let contextoUsuario = createContext();
+  function App() {
+    let [usuario,setUsuario]=useState("Javi");
 
-// Crea un contexto
-const MiContexto = createContext();
-
-// Componente que provee el contexto
-function MiProveedorDeContexto(props) {
-  return (
-    <MiContexto.Provider value={{ mensaje: "Hola desde el contexto!" }}>
-      {props.children}
-    </MiContexto.Provider>
-  );
+    return(
+      <div>
+      <contextoUsuario.Provider value={usuario}>
+        <Componente2></Componente2>
+      </contextoUsuario.Provider>
+      </div>
+    );
+  }
+function Componente2() {
+  return(
+    <div>
+      <Componente3></Componente3>
+    </div>
+  )
+}
+function Componente3() {
+  let usuarioQuerido = useContext(contextoUsuario);
+  return(
+    <h2>hola {usuarioQuerido}</h2>
+  )
 }
 
-// Componente que consume el contexto
-function MiConsumidorDeContexto() {
-  // Utiliza el hook useContext para acceder al valor del contexto
-  const { mensaje } = useContext(MiContexto);
-  return <div>{mensaje}</div>;
-}
 
-// Uso de los componentes
-function App() {
-  return (
-    <MiProveedorDeContexto>
-      <MiConsumidorDeContexto />
-    </MiProveedorDeContexto>
-  );
-}
+
 export default App;
